@@ -10,7 +10,7 @@ const notFound = (msg, request, response) => {
   response.end();
 };
 
-app.get("/", (req, response) => {
+app.get("/", (req, res) => {
   res.json(demarches);
 });
 
