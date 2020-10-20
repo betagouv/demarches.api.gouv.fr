@@ -1,7 +1,7 @@
 const express = require("express");
 const demarches = require("./demarches/index.js");
 const app = express();
-const port = 8000;
+const port = 3000;
 
 app.get("/", (req, res) => {
   res.json(demarches);
