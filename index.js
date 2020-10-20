@@ -3,7 +3,14 @@ const demarches = require("./demarches/index.js");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => {
+const notFound = (msg, request, response) => {
+  console.log(`[404] ${request.path}`);
+  response.statusCode = 404;
+  response.send({ Error: msg });
+  response.end();
+};
+
+app.get("/", (req, response) => {
   res.json(demarches);
 });
 
@@ -13,8 +20,8 @@ app.get("/:apiSlug", function (req, res) {
   const slug = req.params.apiSlug;
 
   if (!demarches[slug]) {
-    res.statusCode = 404;
-    res.send({ Error: "No demarche was found for this api" });
+    notFound("No demarche was found for this api", req, res);
+    return;
   }
   res.json(demarches[slug]);
 });
@@ -25,9 +32,14 @@ app.get("/:apiSlug/:demarcheId", function (req, res) {
   const slug = req.params.apiSlug;
   const demarcheId = req.params.demarcheId;
 
+  if (!demarches[slug]) {
+    notFound("No demarche was found for this api", req, res);
+    return;
+  }
+
   if (!demarches[slug][demarcheId]) {
-    res.statusCode = 404;
-    res.send({ Error: "This demarche was not found for this api" });
+    notFound("This demarche was not found for this api", req, res);
+    return;
   }
 
   res.writeHead(302, {
