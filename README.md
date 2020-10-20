@@ -1,6 +1,6 @@
 # demarches.api.gouv.fr
 
-[Datapass](https://github.com/betagouv/datapass) est l'outil d'habilitation de la dinum, qui permet a un individu, une société de droit privée ou une administration, de faire une demande d'accès à de la donnée, disponible via API.
+[Datapass](https://github.com/betagouv/datapass) l'outil de gestion des habilitations juridiques pour les données à accès restreint.
 
 L'usage d'une API / de données peut s'inscrire dans le cadre de la simplification des démarches en ligne.
 
