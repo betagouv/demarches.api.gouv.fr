@@ -1,7 +1,7 @@
 const express = require("express");
 const demarches = require("./demarches/index.js");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 8000;
 
 const notFound = (msg, request, response) => {
   console.log(`[404] ${request.path}`);
