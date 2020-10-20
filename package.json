@@ -1,0 +1,25 @@
+{
+  "name": "demarches.api.gouv.fr",
+  "version": "1.0.0",
+  "description": "Link shortner ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js",
+    "start": "node index.js",
+    "deploy": "git push dokku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betagouv/demarches.api.gouv.fr.git"
+  },
+  "author": "DINUM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betagouv/demarches.api.gouv.fr/issues"
+  },
+  "homepage": "https://github.com/betagouv/demarches.api.gouv.fr#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
