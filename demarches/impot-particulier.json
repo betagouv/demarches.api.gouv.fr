@@ -1,0 +1,17 @@
+{
+  "default": {
+    "path": "https://datapass.api.gouv.fr/api-impot-particulier-sandbox",
+    "label": "Demande libre sans FranceConnectée",
+    "about": "https://api.gouv.fr/les-api/impot-particulier"
+  },
+  "via-france-connect": {
+    "path": "https://datapass.api.gouv.fr/api-impot-particulier-fc-sandbox",
+    "label": "Demande libre via FranceConnect",
+    "about": "https://api.gouv.fr/guides/impot-particulier"
+  },
+  "bank-lep": {
+    "path": "https://datapass.api.gouv.fr/api-impot-particulier-sandbox?scopes=%7B%22dgfip_rfr%22%3Afalse%2C%22dgfip_nbpart%22%3Afalse%2C%22dgfip_aft%22%3Afalse%2C%22dgfip_locaux_th%22%3Afalse%2C%22dgfip_eligibilite_lep%22%3Atrue%2C%22dgfip_annee_n_moins_1%22%3Afalse%2C%22dgfip_annee_n_moins_2%22%3Atrue%2C%22dgfip_acces_spi%22%3Atrue%2C%22dgfip_acces_etat_civil%22%3Atrue%7D",
+    "label": "Vérification de l’éligibilité au LEP par un établissement bancaire",
+    "about": "https://api.gouv.fr/guides/ccas"
+  },
+}
